@@ -10,7 +10,7 @@ from werobot.reply import ArticlesReply, Article
 
 @robot.text
 def echo(message):
-   reply = ArticlesReply(message=message)
+    reply = ArticlesReply(message=message)
     article = Article(
         title="WeRoBot",
         description="WeRoBot是一个微信机器人框架",
