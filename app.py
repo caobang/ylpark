@@ -10,10 +10,10 @@ from robot import robot
 from werobot.contrib.flask import make_view
 
 app = Flask(__name__)
-app.add_url_rule(rule='/weixin/',
-                 endpoint='werobot',
-                 view_func=make_view(robot),
-                 methods=['GET', 'POST'])
+
+@app.route('/weixin/',methods=['GET', 'POST'])
+def hello():
+	return make_view(robot)
 
 @app.route('/hello/')
 def hello():

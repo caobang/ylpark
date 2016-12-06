@@ -1,5 +1,5 @@
 # -*- coding: UTF-8 -*-  
-from werobot.robot import WeRoBot
+from werobot import WeRoBot
 from werobot.session.saekvstorage import SaeKVDBStorage
 from werobot.replies import TextReply
 
