@@ -11,7 +11,7 @@ from werobot.contrib.flask import make_view
 
 app = Flask(__name__)
 
-@app.route('/weixin/')
+@app.route('/weixin/',methods=['GET', 'POST'])
 def index():
 	return make_view(robot)
 
