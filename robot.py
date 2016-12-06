@@ -1,4 +1,4 @@
-# -*- coding: UTF-8 -*-  
+# coding=utf-8
 from werobot import WeRoBot
 from werobot.session.saekvstorage import SaeKVDBStorage
 
@@ -7,5 +7,5 @@ robot = WeRoBot(token="caobang", enable_session=True,session_storage=session_sto
 
 @robot.text
 def echo(message):
-    return "r: %s" % message.content
+    return "为: %s" % message.content
 
