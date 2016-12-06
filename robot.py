@@ -18,4 +18,5 @@ def echo(message):
         url="https://github.com/whtsky/WeRoBot"
     )
     reply.add_article(article)
+    return reply
 
