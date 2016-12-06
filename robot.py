@@ -6,7 +6,7 @@ from werobot.replies import TextReply
 session_storage = SaeKVDBStorage()
 robot = WeRoBot(token="caobang", enable_session=True,session_storage=session_storage)
 
-help = '''你好，欢迎关注\"瑶湖郊野森林公园\"
+help = '''您好，欢迎关注\"瑶湖郊野森林公园\"
 回复下列内容获取对应信息：
 天气： 获取公园附近天气信息
 交通： 获取公园交通信息
@@ -34,6 +34,12 @@ def tianqi():
 @robot.filter("交通")
 def ditu():
     return [
+        [
+            "选择您的出行方式",
+            "",
+            "",
+            ""
+        ],
         [
             "驾车",
             "",
