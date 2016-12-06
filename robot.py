@@ -83,6 +83,6 @@ def echo(message):
                 "http://www.caiyunapp.com/h5/?lonlat=116.056053,28.670259"
             ]
         ]
-    else 
+    else :
         return "收到消息"
 
