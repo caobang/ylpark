@@ -11,9 +11,14 @@ from werobot.contrib.flask import make_view
 
 app = Flask(__name__)
 
-@app.route('/weixin/',methods=['GET', 'POST'])
+@app.route('/weixin/',endpoint='werobot',methods=['GET', 'POST'])
 def index():
 	return make_view(robot)
+
+app.add_url_rule(rule='/weixin/',
+                 endpoint='werobot',
+                 view_func=make_view(robot),
+                 methods=['GET', 'POST'])
 
 @app.route('/hello/')
 def hello():
