@@ -7,5 +7,5 @@ robot = WeRoBot(token="caobang", enable_session=True,session_storage=session_sto
 
 @robot.text
 def echo(message):
-    return "received: %s" % message.content
+    return TextReply(message=message, content='Hello!')
 
