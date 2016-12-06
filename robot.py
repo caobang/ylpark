@@ -1,6 +1,4 @@
-
-
-import werobot from WeRoBot
+from werobot import WeRoBot
 from werobot.session.saekvstorage import SaeKVDBStorage
 
 session_storage = SaeKVDBStorage()
