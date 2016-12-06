@@ -10,5 +10,5 @@ from werobot.replies import TextReply
 
 @robot.text
 def echo(message):
-    return "微信你不懂爱"
+    return "收到：%s" % message.content
 
