@@ -10,5 +10,5 @@ from werobot.replies import TextReply
 
 @robot.text
 def echo(message):
-    return "收到 %s"%'sad'
+    return message.content
 
