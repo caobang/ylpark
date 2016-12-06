@@ -30,6 +30,7 @@ def tianqi():
         img="http://tu.ihuan.me/api/me_all_pic_go",
         url="http://www.caiyunapp.com/h5/?lonlat=116.056053,28.670259"
     )
+    reply.add_article(article)
     return reply
 # reply.add_article(article)
 #    return [
