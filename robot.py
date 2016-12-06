@@ -67,7 +67,7 @@ def ditu():
         [
             "瑶湖周边",
             "",
-            "",
+            "https://mmbiz.qlogo.cn/mmbiz/kic6WM8B8jd41FXzEMpTpxRe8HIMUOeTyHrsBFjkyL26ObwMEGhdOYLiaRCyvH0iahpgABLRsCk5sbezbBbWaXTibQ/0?wx_fmt=jpeg",
             "http://m.amap.com/around/?locations=116.056053,28.670259&keywords=美食,酒店,地铁站,公交站&defaultIndex=1&key=54ddd5d2037636537502e1cb5e16d0a4"
         ]
     ]    
