@@ -16,7 +16,7 @@ app.add_url_rule(rule='/weixin/',
 
 @app.route('/hello/')
 def hello():
-	return 'hello'
+	return 'hello1'
 
 if __name__ == '__main__':
 	app.run()

@@ -6,5 +6,5 @@ robot = WeRoBot(token="caobang", enable_session=True,session_storage=session_sto
 
 @robot.handler
 def echo(message):
-    return 'Hello World!'
+    return 'Hello Test'
 
