@@ -5,7 +5,7 @@ from werobot.session.saekvstorage import SaeKVDBStorage
 session_storage = SaeKVDBStorage()
 robot = WeRoBot(token="caobang", enable_session=True,session_storage=session_storage)
 
-from werobot.reply import ArticlesReply, Article
+from werobot.replies import ArticlesReply, Article
 
 
 @robot.text
