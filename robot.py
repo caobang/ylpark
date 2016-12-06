@@ -22,7 +22,7 @@ def ditu():
     return help
 
 @robot.filter("天气")
-def tianqi():
+def tianqi(message):
     reply = TextReply(message=message, content='Hello!')
     return reply
 # reply.add_article(article)
