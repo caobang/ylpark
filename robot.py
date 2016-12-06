@@ -8,8 +8,9 @@ robot = WeRoBot(token="caobang", enable_session=True,session_storage=session_sto
 
 help = '''您好，欢迎关注\"瑶湖郊野森林公园\"
 回复下列内容获取对应信息：
-天气： 获取公园附近天气信息
+天气： 获取公园天气信息
 交通： 获取公园交通信息
+周边： 获取公园周边信息
 帮助： 获取本信息'''
 
 @robot.subscribe
@@ -57,6 +58,17 @@ def ditu():
             "",
             "",
             "http://m.amap.com/navi/?dest=116.056053,28.670259&destName=%E7%91%B6%E6%B9%96%E9%83%8A%E9%87%8E%E6%A3%AE%E6%9E%97%E5%85%AC%E5%9B%AD&naviBy=walk&key=54ddd5d2037636537502e1cb5e16d0a4"
+        ]
+    ]
+
+@robot.filter("周边")
+def ditu():
+    return [
+        [
+            "瑶湖周边",
+            "",
+            "",
+            "http://m.amap.com/around/?locations=116.056053,28.670259&keywords=美食,酒店,地铁站,公交站&defaultIndex=1&key=54ddd5d2037636537502e1cb5e16d0a4"
         ]
     ]    
 
