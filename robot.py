@@ -23,14 +23,7 @@ def ditu():
 
 @robot.filter("天气")
 def tianqi():
-    reply = ArticlesReply(message=message)
-    article = Article(
-        title="瑶湖天气",
-        description="",
-        img="http://tu.ihuan.me/api/me_all_pic_go",
-        url="http://www.caiyunapp.com/h5/?lonlat=116.056053,28.670259"
-    )
-    reply.add_article(article)
+    reply = TextReply(message=message, content='Hello!')
     return reply
 # reply.add_article(article)
 #    return [
