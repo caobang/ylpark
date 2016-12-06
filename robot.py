@@ -10,9 +10,5 @@ from werobot.replies import TextReply
 
 @robot.text
 def echo(message):
-    return [
-        "微信你不懂爱",
-        "龚琳娜最新力作",
-        "http://weixin.com/budongai.mp3",
-        ]
+    return "微信你不懂爱"
 
