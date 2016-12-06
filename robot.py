@@ -4,7 +4,7 @@ from werobot.session.saekvstorage import SaeKVDBStorage
 from werobot.replies import TextReply
 
 session_storage = SaeKVDBStorage()
-robot = WeRoBot(token="caobang")
+robot = WeRoBot(token="caobang", enable_session=True,session_storage=session_storage)
 
 help = '''您好，欢迎关注\"瑶湖郊野森林公园\"
 回复下列内容获取对应信息：
