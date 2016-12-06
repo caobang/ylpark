@@ -4,7 +4,7 @@ from werobot.session.saekvstorage import SaeKVDBStorage
 from werobot.replies import TextReply
 
 session_storage = SaeKVDBStorage()
-robot = WeRoBot(token="caobang", enable_session=False,session_storage=session_storage)
+robot = WeRoBot(token="caobang", enable_session=True,session_storage=session_storage)
 
 help = '''您好，欢迎关注\"瑶湖郊野森林公园\"
 回复下列内容获取对应信息：
@@ -27,7 +27,7 @@ def tianqi():
         [
             "瑶湖天气",
             "",
-            "http://tu.ihuan.me/api/me_all_pic_go",
+            "http://tu.ihuan.me/api/me_all_pic",
             "http://www.caiyunapp.com/h5/?lonlat=116.056053,28.670259"
         ]
     ]
@@ -67,7 +67,7 @@ def ditu():
         [
             "瑶湖周边",
             "",
-            "http://tu.ihuan.me/api/me_all_pic_go",
+            "http://tu.ihuan.me/api/me_all_pic",
             "http://m.amap.com/around/?locations=116.056053,28.670259&keywords=美食,酒店,地铁站,公交站&defaultIndex=1&key=54ddd5d2037636537502e1cb5e16d0a4"
         ]
     ]    
