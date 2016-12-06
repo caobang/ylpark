@@ -11,10 +11,7 @@ from werobot.contrib.flask import make_view
 
 app = Flask(__name__)
 
-app.add_url_rule(rule='/weixin/',
-                 endpoint='werobot',
-                 view_func=make_view(robot),
-                 methods=['GET', 'POST'])
+app.add_url_rule('/weixin/','werobot',make_view(robot),['GET', 'POST'])
 
 @app.route('/hello/')
 def hello():
