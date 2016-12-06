@@ -6,5 +6,5 @@ robot = WeRoBot(token="caobang", enable_session=True,session_storage=session_sto
 
 @robot.text
 def echo(message):
-    return '收到:%s' % message.content
+    return "正文为 a "
 
