@@ -1,4 +1,3 @@
-# -*- coding: UTF-8 -*-  
 import sae
 from app import app
 
