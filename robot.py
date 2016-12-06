@@ -77,7 +77,7 @@ def echo(message):
     if message.content == "a":
         return [
             [
-                "天气",
+                message.content,
                 "",
                 "http://tu.ihuan.me/api/me_all_pic_go",
                 "http://www.caiyunapp.com/h5/?lonlat=116.056053,28.670259"
