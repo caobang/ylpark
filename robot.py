@@ -4,7 +4,10 @@ from werobot.session.saekvstorage import SaeKVDBStorage
 session_storage = SaeKVDBStorage()
 robot = WeRoBot(token="caobang", enable_session=True,session_storage=session_storage)
 
-@robot.handler
+@robot.text
 def echo(message):
-    return 'received:%s' % message
+    return 'received:%s' % message.content
 
+@robot.filter("ditu")
+def a():
+    return "r ditu"
