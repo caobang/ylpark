@@ -33,8 +33,26 @@ def tianqi():
 
 @robot.filter("交通")
 def ditu():
-    return '''自驾路线：驾车上瑶湖大桥，到瑶湖大桥桥头有加油站，即可看到瑶湖森林公园停车场导向标识。
-公交车：乘坐“226路“到瑶湖大酒店（加油站）或后埔尚村站对面直达瑶湖森林公园，乘坐”258路“到后埔尚村下车对面直达瑶湖森林公园。'''
+    return [
+        [
+            "驾车",
+            "",
+            "",
+            "http://m.amap.com/navi/?dest=116.056053,28.670259&destName=%E7%91%B6%E6%B9%96%E9%83%8A%E9%87%8E%E6%A3%AE%E6%9E%97%E5%85%AC%E5%9B%AD&naviBy=car&key=54ddd5d2037636537502e1cb5e16d0a4"
+        ],
+        [
+            "公交",
+            "",
+            "",
+            "http://m.amap.com/navi/?dest=116.056053,28.670259&destName=%E7%91%B6%E6%B9%96%E9%83%8A%E9%87%8E%E6%A3%AE%E6%9E%97%E5%85%AC%E5%9B%AD&naviBy=bus&key=54ddd5d2037636537502e1cb5e16d0a4"
+        ],
+        [
+            "步行",
+            "",
+            "",
+            "http://m.amap.com/navi/?dest=116.056053,28.670259&destName=%E7%91%B6%E6%B9%96%E9%83%8A%E9%87%8E%E6%A3%AE%E6%9E%97%E5%85%AC%E5%9B%AD&naviBy=walk&key=54ddd5d2037636537502e1cb5e16d0a4"
+        ]
+    ]    
 
 @robot.text
 def echo(message):
