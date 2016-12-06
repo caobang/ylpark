@@ -7,5 +7,18 @@ robot = WeRoBot(token="caobang", enable_session=True,session_storage=session_sto
 
 @robot.text
 def echo(message):
-    reply = TextReply(message=message, content='Hello!')
+    return [
+        [
+            "title",
+            "description",
+            "img",
+            "url"
+        ],
+        [
+            "whtsky",
+            "I wrote WeRoBot",
+            "https://secure.gravatar.com/avatar/0024710771815ef9b74881ab21ba4173?s=420",
+            "http://whouz.com/"
+        ]
+    ]
 
