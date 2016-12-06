@@ -1,14 +1,12 @@
 # -*- coding: UTF-8 -*-  
-from werobot import WeRoBot
+from werobot.robot import WeRoBot
 from werobot.session.saekvstorage import SaeKVDBStorage
+from werobot.replies import TextReply
 
 session_storage = SaeKVDBStorage()
 robot = WeRoBot(token="caobang", enable_session=True,session_storage=session_storage)
 
-from werobot.replies import TextReply
-
-
 @robot.text
 def echo(message):
-    return message.content
+    return "收到消息"
 
