@@ -22,25 +22,15 @@ def ditu():
     return help
 
 @robot.filter("天气")
-def tianqi(message):
-    reply = ArticlesReply(message=message)
-    article = Article(
-        title="瑶湖天气",
-        description="",
-        img="http://tu.ihuan.me/api/me_all_pic_go",
-        url="http://www.caiyunapp.com/h5/?lonlat=116.056053,28.670259"
-    )
-    reply.add_article(article)
-    return reply
-# reply.add_article(article)
-#    return [
-#        [
-#             "瑶湖天气",
-#             "",
-#             "http://tu.ihuan.me/api/me_all_pic_go",
-#             "http://www.caiyunapp.com/h5/?lonlat=116.056053,28.670259"
-#         ]
-#     ]
+def tianqi():
+    return [
+        [
+            "瑶湖天气",
+             "",
+             "http://tu.ihuan.me/api/me_all_pic_go",
+             "http://www.caiyunapp.com/h5/?lonlat=116.056053,28.670259"
+         ]
+    ]
 
 @robot.filter("交通")
 def ditu():
@@ -84,5 +74,15 @@ def ditu():
 
 @robot.text
 def echo(message):
-    return "收到消息"
+    if message.content == "a")
+        return [
+        [
+            "瑶湖天气",
+             "",
+             "http://tu.ihuan.me/api/me_all_pic_go",
+             "http://www.caiyunapp.com/h5/?lonlat=116.056053,28.670259"
+         ]
+    ]
+    else 
+        return "收到消息"
 
