@@ -74,7 +74,7 @@ def ditu():
 
 @robot.text
 def echo(message):
-    if (message.content == "a")
+    if message.content == "a":
         return [
             [
                 "天气",
