@@ -1,7 +1,7 @@
 # -*- coding: UTF-8 -*-  
 from werobot import WeRoBot
 from werobot.session.saekvstorage import SaeKVDBStorage
-from werobot.replies import TextReply
+from werobot.replies import TextReply,ArticlesReply, Article
 
 session_storage = SaeKVDBStorage()
 robot = WeRoBot(token="caobang", enable_session=True,session_storage=session_storage)
@@ -23,14 +23,23 @@ def ditu():
 
 @robot.filter("天气")
 def tianqi():
-    return [
-        [
-            "瑶湖天气",
-            "",
-            "http://tu.ihuan.me/api/me_all_pic_go",
-            "http://www.caiyunapp.com/h5/?lonlat=116.056053,28.670259"
-        ]
-    ]
+    reply = ArticlesReply(message=message)
+    article = Article(
+        title="瑶湖天气",
+        description="",
+        img="http://tu.ihuan.me/api/me_all_pic_go",
+        url="http://www.caiyunapp.com/h5/?lonlat=116.056053,28.670259"
+    )
+    return reply
+# reply.add_article(article)
+#    return [
+#        [
+#             "瑶湖天气",
+#             "",
+#             "http://tu.ihuan.me/api/me_all_pic_go",
+#             "http://www.caiyunapp.com/h5/?lonlat=116.056053,28.670259"
+#         ]
+#     ]
 
 @robot.filter("交通")
 def ditu():
