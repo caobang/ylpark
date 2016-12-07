@@ -47,19 +47,19 @@ def ditu():
         [
             "驾车",
             "",
-            "",
+            "http://ylpark.applinzi.com/static/img/wx-car.png",
             "http://m.amap.com/navi/?dest=116.056053,28.670259&destName=%E7%91%B6%E6%B9%96%E9%83%8A%E9%87%8E%E6%A3%AE%E6%9E%97%E5%85%AC%E5%9B%AD&naviBy=car&key=54ddd5d2037636537502e1cb5e16d0a4"
         ],
         [
             "公交",
             "",
-            "",
+            "http://ylpark.applinzi.com/static/img/wx-bus.png",
             "http://m.amap.com/navi/?dest=116.056053,28.670259&destName=%E7%91%B6%E6%B9%96%E9%83%8A%E9%87%8E%E6%A3%AE%E6%9E%97%E5%85%AC%E5%9B%AD&naviBy=bus&key=54ddd5d2037636537502e1cb5e16d0a4"
         ],
         [
             "步行",
             "",
-            "",
+            "http://ylpark.applinzi.com/static/img/wx-walk.png",
             "http://m.amap.com/navi/?dest=116.056053,28.670259&destName=%E7%91%B6%E6%B9%96%E9%83%8A%E9%87%8E%E6%A3%AE%E6%9E%97%E5%85%AC%E5%9B%AD&naviBy=walk&key=54ddd5d2037636537502e1cb5e16d0a4"
         ]
     ]

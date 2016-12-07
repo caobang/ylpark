@@ -2,5 +2,5 @@ name: ylpark
 version: 1
 
 handlers:
-- url: /img/
-  static_path: img
+- url: /static/
+  static_path: static
