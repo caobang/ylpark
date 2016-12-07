@@ -3,6 +3,7 @@ from werobot import WeRoBot
 from werobot.session.saekvstorage import SaeKVDBStorage
 from werobot.replies import TextReply,ArticlesReply, Article
 import time
+import urllib2
 
 session_storage = SaeKVDBStorage()
 robot = WeRoBot(token="caobang", enable_session=True,session_storage=session_storage)
@@ -79,7 +80,7 @@ def ditu():
     return [
         [
             "必应今日美图",
-            "http://tu.ihuan.me/api/bing/text?t=%s" % time.time(),
+            urllib2.urlopen("http://tu.ihuan.me/tu/api/bing/text?t=%s" % time.time() ).read(),
             "http://tu.ihuan.me/api/bing/go?t=%s" % time.time(),
             "http://cn.bing.com/images/trending"
         ]
