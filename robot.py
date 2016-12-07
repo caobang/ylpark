@@ -9,20 +9,21 @@ robot = WeRoBot(token="caobang", enable_session=True,session_storage=session_sto
 
 help = '''您好，欢迎关注\"瑶湖郊野森林公园\"
 回复下列内容获取对应信息：
-天气： 获取公园天气信息
-交通： 获取公园交通信息
-周边： 获取公园周边信息
-帮助： 获取本信息'''
+天气(1)： 获取公园天气信息
+交通(2)： 获取公园交通信息
+周边(3)： 获取公园周边信息
+美图(4)： 获取必应今日美图
+帮助(0)： 获取本信息'''
 
 @robot.subscribe
 def subscribe():
     return help
 
-@robot.filter("帮助")
+@robot.filter("帮助","0")
 def ditu():
     return help
 
-@robot.filter("天气")
+@robot.filter("天气","1")
 def tianqi():
     return [
         [
@@ -33,7 +34,7 @@ def tianqi():
          ]
     ]
 
-@robot.filter("交通")
+@robot.filter("交通","2")
 def ditu():
     return [
         [
@@ -62,7 +63,7 @@ def ditu():
         ]
     ]
 
-@robot.filter("周边")
+@robot.filter("周边","3")
 def ditu():
     return [
         [
@@ -71,7 +72,18 @@ def ditu():
             "http://tu.ihuan.me/api/me_all_pic_go?t=%s" % time.time(),
             "http://m.amap.com/around/?locations=116.056053,28.670259&keywords=美食,酒店,地铁站,公交站&defaultIndex=1&key=54ddd5d2037636537502e1cb5e16d0a4"
         ]
-    ]    
+    ]
+
+@robot.filter("美图","4")
+def ditu():
+    return [
+        [
+            "必应今日美图",
+            "http://tu.ihuan.me/api/bing/go?t=%s" % time.time(),
+            "http://tu.ihuan.me/api/bing/text?t=%s" % time.time(),
+            "http://cn.bing.com/images/trending"
+        ]
+    ]
 
 @robot.text
 def echo(message):
