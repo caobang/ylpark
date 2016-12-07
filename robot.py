@@ -79,8 +79,8 @@ def ditu():
     return [
         [
             "必应今日美图",
-            "http://tu.ihuan.me/api/bing/go?t=%s" % time.time(),
             "http://tu.ihuan.me/api/bing/text?t=%s" % time.time(),
+            "http://tu.ihuan.me/api/bing/go?t=%s" % time.time(),
             "http://cn.bing.com/images/trending"
         ]
     ]
