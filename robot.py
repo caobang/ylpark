@@ -95,7 +95,15 @@ def qiandao(message):
 
 @robot.filter("33")
 def qiandao(message):
-    return message.message_id 
+    return str(message.message_id) 
+
+@robot.filter("44")
+def qiandao(message):
+    return str(message.time)
+
+@robot.filter("55")
+def qiandao(message):
+    return 1
 
 @robot.text
 def echo(message):
