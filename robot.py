@@ -87,11 +87,15 @@ def meitu():
 
 @robot.filter("11")
 def qiandao(message):
-    return "%d" %message.target
+    return message.target
 
 @robot.filter("22")
 def qiandao(message):
-    return "%d" %message.source
+    return message.source
+
+@robot.filter("33")
+def qiandao(message):
+    return message.message_id 
 
 @robot.text
 def echo(message):
