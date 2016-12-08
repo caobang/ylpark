@@ -19,11 +19,11 @@ help = '''您好，欢迎关注\"瑶湖郊野森林公园\"
 def subscribe():
     return help
 
-@robot.filter("帮助","0")
-def ditu():
+@robot.filter("帮助","0","bz")
+def bangzhu():
     return help
 
-@robot.filter("天气","1")
+@robot.filter("天气","1","tq")
 def tianqi():
     return [
         [
@@ -34,8 +34,8 @@ def tianqi():
          ]
     ]
 
-@robot.filter("交通","2")
-def ditu():
+@robot.filter("交通","2","jt")
+def jiaotong():
     return [
         [
             "选择您的出行方式",
@@ -63,8 +63,8 @@ def ditu():
         ]
     ]
 
-@robot.filter("周边","3")
-def ditu():
+@robot.filter("周边","3","zb")
+def zhoubian():
     return [
         [
             "瑶湖周边",
@@ -74,8 +74,8 @@ def ditu():
         ]
     ]
 
-@robot.filter("美图","4")
-def ditu():
+@robot.filter("美图","4","mt")
+def meitu():
     return [
         [
             "必应今日美图",
