@@ -1,15 +1,15 @@
 # -*- coding: UTF-8 -*-  
 from werobot import WeRoBot
-from werobot.session.saekvstorage import SaeKVDBStorage
+from config import Config
 from werobot.replies import TextReply,ArticlesReply, Article
 import time
 import urllib2
 
-session_storage = SaeKVDBStorage()
-robot = WeRoBot(token="caobang", enable_session=True,session_storage=session_storage)
+robot = WeRoBot()
+robot.config.from_object(Config)
 
 help = '''您好，欢迎关注\"瑶湖郊野森林公园\"
-回复下列内容获取对应信息：
+回复下列文字或数字获取对应信息：
 天气(1)： 获取公园天气信息
 交通(2)： 获取公园交通信息
 周边(3)： 获取公园周边信息
@@ -80,7 +80,7 @@ def ditu():
     return [
         [
             "必应今日美图",
-            urllib2.urlopen("http://tu.ihuan.me/tu/api/bing/text?t=%s" % time.time() ).read(),
+            urllib2.urlopen("http://tu.ihuan.me/tu/api/bing/text?t=%s" % time.time()).read(),
             "http://tu.ihuan.me/api/bing/go?t=%s" % time.time(),
             "http://cn.bing.com/images/trending"
         ]
