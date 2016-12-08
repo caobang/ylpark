@@ -6,7 +6,7 @@ import time
 import urllib2
 
 robot = WeRoBot(enable_session=False)
-robot.config.from_object(Config)
+robot.config.update(Config)
 
 help = '''您好，欢迎关注\"瑶湖郊野森林公园\"
 回复下列文字或数字获取对应信息：
