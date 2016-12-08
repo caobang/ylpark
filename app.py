@@ -1,4 +1,4 @@
-# -*- coding: UTF-8 -*-  
+# -*- coding: UTF-8 -*-
 import os
 import sys
 root = os.path.dirname(__file__)

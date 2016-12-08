@@ -1,10 +1,10 @@
-# -*- coding: UTF-8 -*-  
+# -*- coding: UTF-8 -*-
 from werobot import WeRoBot
 from werobot.replies import TextReply,ArticlesReply, Article
 import time
 import urllib2
 
-robot = WeRoBot(enable_session=False)
+# robot = WeRoBot(enable_session=False)
 robot.config.from_pyfile('config.py')
 
 help = '''您好，欢迎关注\"瑶湖郊野森林公园\"
