@@ -5,7 +5,7 @@ from werobot.replies import TextReply,ArticlesReply, Article
 import time
 import urllib2
 
-robot = WeRoBot()
+robot = WeRoBot(enable_session=False)
 robot.config.from_object(Config)
 
 help = '''您好，欢迎关注\"瑶湖郊野森林公园\"
