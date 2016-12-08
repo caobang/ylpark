@@ -1,12 +1,11 @@
 # -*- coding: UTF-8 -*-  
 from werobot import WeRoBot
-from config import Config
 from werobot.replies import TextReply,ArticlesReply, Article
 import time
 import urllib2
 
 robot = WeRoBot(enable_session=False)
-robot.config.update(Config)
+robot.config.from_pyfile('config.py')
 
 help = '''您好，欢迎关注\"瑶湖郊野森林公园\"
 回复下列文字或数字获取对应信息：
