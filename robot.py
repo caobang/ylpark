@@ -85,9 +85,13 @@ def meitu():
         ]
     ]
 
-@robot.filter("签到")
+@robot.filter("11")
 def qiandao(message):
-    return "%s" %message.content
+    return "%d" %message.target
+
+@robot.filter("22")
+def qiandao(message):
+    return "%d" %message.source
 
 @robot.text
 def echo(message):
