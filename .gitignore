@@ -1,0 +1,5 @@
+/migrations/
+/tests/
+/venv/
+!/venv/Lib/site-packages/
+.pyc
