@@ -1,4 +1,4 @@
-/migrations/
-/tests/
-/venv/
+/migrations/*
+/tests/*
+/venv/*
 !/venv/Lib/site-packages/*
