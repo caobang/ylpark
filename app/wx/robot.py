@@ -6,7 +6,7 @@ import urllib2
 
 robot = WeRoBot(token='caobang',enable_session=False)
 
-location='116.062785,28.669552'
+location='116.063085,28.669542'
 #116.056053,28.670259
 help = '''您好，欢迎关注\"瑶湖郊野森林公园\"
 回复下列内容获取对应信息：
