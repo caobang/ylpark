@@ -1,19 +1,18 @@
 # -*- coding: UTF-8 -*-
 from werobot import WeRoBot
-# from werobot.session.sqlitestorage import SQLiteStorage
 from werobot.replies import TextReply,ArticlesReply,Article
 import time
 import urllib2
 
-# storage = SQLiteStorage()
 robot = WeRoBot(token='caobang',enable_session=False)
 
 help = '''您好，欢迎关注\"瑶湖郊野森林公园\"
-回复下列文字或数字获取对应信息：
+回复下列内容获取对应信息：
 天气(1)： 获取公园天气信息
 交通(2)： 获取公园交通信息
 周边(3)： 获取公园周边信息
 美图(4)： 获取必应今日美图
+烧烤(5)： 获取烧烤预约电话
 帮助(0)： 获取本信息'''
 
 @robot.subscribe
@@ -85,6 +84,15 @@ def meitu():
             "http://cn.bing.com/images/trending"
         ]
     ]
+
+@robot.filter("烧烤","5","sk")
+def meitu():
+    return """
+    预约时间：上午9:00至晚7:30
+    电话：18770090060
+    微信：18770090060
+    QQ:601401792
+    """
 
 @robot.filter("签到","9","qd")
 def qiandao(message):

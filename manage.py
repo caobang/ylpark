@@ -2,7 +2,7 @@
 import os
 import sys
 root = os.path.dirname(__file__)
-sys.path.insert(1, os.path.join(root, 'venv/Lib/site-packages'))
+sys.path.insert(0, os.path.join(root, 'venv/Lib/site-packages'))
 
 from flask_script import Manager
 from app import create_app
