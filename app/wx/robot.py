@@ -7,6 +7,7 @@ import urllib2
 robot = WeRoBot(token='caobang',enable_session=False)
 
 location='116.062785,28.669552'
+#116.056053,28.670259
 help = '''您好，欢迎关注\"瑶湖郊野森林公园\"
 回复下列内容获取对应信息：
 天气(1)： 获取公园天气信息
@@ -30,8 +31,8 @@ def tianqi():
         [
             "瑶湖天气",
              "",
-             "http://tu.ihuan.me/api/me_all_pic_go?t=%s"%time.time(),
-             "http://www.caiyunapp.com/h5/?lonlat=%s"%location
+             "http://tu.ihuan.me/api/me_all_pic_go?t={0}".format(time.time()),
+             "http://www.caiyunapp.com/h5/?lonlat={0}".format(location)
          ]
     ]
 
@@ -48,19 +49,19 @@ def jiaotong():
             "驾车",
             "",
             "",
-            "http://m.amap.com/navi/?dest=%s&destName=%E7%91%B6%E6%B9%96%E9%83%8A%E9%87%8E%E6%A3%AE%E6%9E%97%E5%85%AC%E5%9B%AD&naviBy=car&key=54ddd5d2037636537502e1cb5e16d0a4"%location
+            "http://m.amap.com/navi/?dest={0}&destName=%E7%91%B6%E6%B9%96%E9%83%8A%E9%87%8E%E6%A3%AE%E6%9E%97%E5%85%AC%E5%9B%AD&naviBy=car&key=54ddd5d2037636537502e1cb5e16d0a4".format(location)
         ],
         [
             "公交",
             "",
             "",
-            "http://m.amap.com/navi/?dest=%s&destName=%E7%91%B6%E6%B9%96%E9%83%8A%E9%87%8E%E6%A3%AE%E6%9E%97%E5%85%AC%E5%9B%AD&naviBy=bus&key=54ddd5d2037636537502e1cb5e16d0a4"%location
+            "http://m.amap.com/navi/?dest={0}&destName=%E7%91%B6%E6%B9%96%E9%83%8A%E9%87%8E%E6%A3%AE%E6%9E%97%E5%85%AC%E5%9B%AD&naviBy=bus&key=54ddd5d2037636537502e1cb5e16d0a4".format(location)
         ],
         [
             "步行",
             "",
             "",
-            "http://m.amap.com/navi/?dest=%s&destName=%E7%91%B6%E6%B9%96%E9%83%8A%E9%87%8E%E6%A3%AE%E6%9E%97%E5%85%AC%E5%9B%AD&naviBy=walk&key=54ddd5d2037636537502e1cb5e16d0a4"%location
+            "http://m.amap.com/navi/?dest={0}&destName=%E7%91%B6%E6%B9%96%E9%83%8A%E9%87%8E%E6%A3%AE%E6%9E%97%E5%85%AC%E5%9B%AD&naviBy=walk&key=54ddd5d2037636537502e1cb5e16d0a4".format(location)
         ]
     ]
 
@@ -70,8 +71,8 @@ def zhoubian():
         [
             "瑶湖周边",
             "",
-            "http://tu.ihuan.me/api/me_all_pic_go?t=%s" % time.time(),
-            "http://m.amap.com/around/?locations=%s&keywords=美食,酒店,地铁站,公交站&defaultIndex=1&key=54ddd5d2037636537502e1cb5e16d0a4"%location
+            "http://tu.ihuan.me/api/me_all_pic_go?t={0}".format(time.time()),
+            "http://m.amap.com/around/?locations={0}&keywords=美食,酒店,地铁站,公交站&defaultIndex=1&key=54ddd5d2037636537502e1cb5e16d0a4".format(location)
         ]
     ]
 
@@ -80,8 +81,8 @@ def meitu():
     return [
         [
             "必应今日美图",
-            urllib2.urlopen("http://tu.ihuan.me/tu/api/bing/text?t=%s" % time.time()).read(),
-            "http://tu.ihuan.me/api/bing/go?t=%s" % time.time(),
+            urllib2.urlopen("http://tu.ihuan.me/tu/api/bing/text?t={0}".format(time.time())).read(),
+            "http://tu.ihuan.me/api/bing/go?t={0}".format(time.time()),
             "http://cn.bing.com/images/trending"
         ]
     ]
